@@ -30,20 +30,6 @@ const users = [
     }
   ];
   
-/*function ContactList() {
-    //<div><Contact {... users} /></div>
-     
-    return  ( users.map(info => {
-
-    <contact 
-     name = {info.name} key = {info.name} 
-     avatar = {info.avatar} 
-     online = {info.online} /> 
-
-    }));
-    
-}*/
-
 /*const ContactList = () => (
   <div>
     {users.map(info => (
