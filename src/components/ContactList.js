@@ -43,7 +43,7 @@ const users = [
 ); */
 
 const ContactList = () => (
-    <div>
+    <div> 
       {users.map(info => (
         <Contact 
         {... info} />
