@@ -1,23 +1,26 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './chat.css';
 
-const name = 'Tracey Kim';
-const avatar = 'https://randomuser.me/api/portraits/women/90.jpg';
-const online = true;
-
-function Contact() {
+function Contact(props) {
   return (
   <div className="Contact">   
-    <img src={avatar} className="avatar"/>
+    <img src={props.avatar} className="avatar" alt="pict" />
     <div>
-      <div className="name">{name}</div>    
+      <div className="name">{props.name}</div>    
       <div className="status"> 
-        {online ? <div className="status-online"></div> : <div className="status-offline"></div>}
-        <div className="status-text">{online ? "Online" : "Offline"}</div> 
+        {props.online ? <div className="status-online"></div> : <div className="status-offline"></div>}
+        <div className="status-text">{props.online ? "Online" : "Offline"}</div> 
       </div>
     </div>
   </div> 
   );
 }
+
+Contact.propTypes = {
+  avatar: PropTypes.string,
+  name: PropTypes.string,
+  online: PropTypes.string
+};
 
 export default Contact;
